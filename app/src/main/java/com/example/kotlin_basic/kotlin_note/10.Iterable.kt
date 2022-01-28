@@ -82,4 +82,23 @@ fun main(args: Array<String>) {
         // .. -> 마지막을 포함한다 until과 다름
         println(i)
     }
+    println()
+
+    // 반복하는 방법 (11)
+    var b: Int = 0
+    var c: Int = 4
+
+    while (b < c) {
+        b++ // while 문을 정지시키기 위한 코드
+        println("b")
+    }
+    println()
+
+    // 반복하는 방법 (12)
+    var d: Int = 0
+    var e: Int = 5
+    do {
+        println("hello")
+        d++ // 무한루프를 깨주는 코드
+    } while (d < e) // c < b 조건이 만족하지 못하더라도 do 안의 코드는 반드시 한번 실행된다
 }
