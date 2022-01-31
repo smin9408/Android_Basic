@@ -29,8 +29,8 @@ fun main(args: Array<String>) {
     // 우리가 만든 클래스(설명서)는 자료형이 된다
     val bigCar1: Car = Car("v8 engine", "big")
 
-    val superCar : SuperCar = SuperCar("good engine", "big", "white")
-    val superCar1 : SuperCar = SuperCar("nice engine", "middle", "black")
+    val superCar: SuperCar = SuperCar("good engine", "big", "white")
+    val superCar1: SuperCar = SuperCar("nice engine", "middle", "black")
 
 }
 
@@ -56,3 +56,48 @@ class SuperCar {
         this.door = door
     }
 }
+
+// 클래스 만드는 방법(3) -> 1번 방법의 확장
+// 클래스 이름 옆의 생성자(constructor)는 써도되고 생략해도 된다
+class Car1 constructor(engine: String, body: String) {
+    var door: String = ""
+
+    // 생성자
+    constructor(engine: String, body: String, door: String) : this(engine, body) {
+        this.door = door
+    }
+
+}
+
+
+// 클래스 만드는 방법(4) -> 2번 방법의 확장
+class Car2 {
+    var engine: String = ""
+    var body: String = ""
+    var door: String = ""
+
+    constructor(engine: String, body: String){
+        this.engine = engine
+        this.body = body
+    }
+
+    constructor(engine: String, body: String, door: String){
+        this.engine = engine
+        this.body = body
+        this.door = door
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
