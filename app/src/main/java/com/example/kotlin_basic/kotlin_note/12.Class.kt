@@ -32,6 +32,20 @@ fun main(args: Array<String>) {
     val superCar: SuperCar = SuperCar("good engine", "big", "white")
     val superCar1: SuperCar = SuperCar("nice engine", "middle", "black")
 
+    // 인스턴스가 가지고 있는 기능을 사용하는 방법
+    val myCar: RunableCar = RunableCar("v8 engine", "coupe")
+    myCar.ride()
+    myCar.navi("우리 집")
+    myCar.drive()
+
+    // 인스턴스의 멤버 변수에 접근하는 방법
+    val myCar2: RunableCar2 = RunableCar2("v12 engine", "SUV")
+    println(myCar2.engine)
+    println(myCar2.body)
+
+    println()
+    val testClass:TestClass = TestClass()
+    testClass.test(1,2)
 }
 
 // 클래스(설명서) 만드는 방법(1)
@@ -47,9 +61,9 @@ class SuperCar {
     var door: String
 
     constructor(engine: String, body: String, door: String) {
-        println(engine)
-        println(body)
-        println(door)
+        //println(engine)
+        //println(body)
+        //println(door)
 
         this.engine = engine
         this.body = body
@@ -76,12 +90,12 @@ class Car2 {
     var body: String = ""
     var door: String = ""
 
-    constructor(engine: String, body: String){
+    constructor(engine: String, body: String) {
         this.engine = engine
         this.body = body
     }
 
-    constructor(engine: String, body: String, door: String){
+    constructor(engine: String, body: String, door: String) {
         this.engine = engine
         this.body = body
         this.door = door
@@ -89,8 +103,61 @@ class Car2 {
 }
 
 
+class RunableCar(engine: String, body: String) {
 
+    fun ride() {
+        println("탑승하였습니다")
+    }
 
+    fun drive() {
+        println("달립니다!!")
+    }
+
+    fun navi(destination: String) {
+        println("$destination 으로 목적지가 설정되었습니다")
+    }
+}
+
+class RunableCar2 {
+    var engine: String
+    var body: String
+
+    constructor(engine: String, body: String) {
+        this.engine = engine
+        this.body = body
+    }
+
+    // init은 클래스가 인스턴스화 될때 가장먼저 실행된다
+    // 초기 세팅을 할 때 유용하다
+    init {
+        println("RunableCar2가 만들어 졌습니다")
+    }
+
+    fun ride() {
+        println("탑승하였습니다")
+    }
+
+    fun drive() {
+        println("달립니다!!")
+    }
+
+    fun navi(destination: String) {
+        println("$destination 으로 목적지가 설정되었습니다")
+    }
+}
+
+// 오버로딩 - 이름이 같지만 받는 파라미터가 다른 함수
+// 한 클래스 안에 동일한 이름의 함수를 작설할 수 없다
+// 하지만 함수안에 받는 인자가 다르다면 이름이 같아도 만들 수 있다
+class TestClass() {
+    fun test(a:Int) {
+        println("UP")
+    }
+
+    fun test(a:Int, b:Int) {
+        println("DOWN")
+    }
+}
 
 
 
