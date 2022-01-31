@@ -30,6 +30,7 @@ fun main(args: Array<String>) {
     val bigCar1: Car = Car("v8 engine", "big")
 
     val superCar : SuperCar = SuperCar("good engine", "big", "white")
+    val superCar1 : SuperCar = SuperCar("nice engine", "middle", "black")
 
 }
 
@@ -46,6 +47,12 @@ class SuperCar {
     var door: String
 
     constructor(engine: String, body: String, door: String) {
+        println(engine)
+        println(body)
+        println(door)
 
+        this.engine = engine
+        this.body = body
+        this.door = door
     }
 }
