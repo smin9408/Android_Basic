@@ -5,7 +5,7 @@ package com.example.kotlin_basic.kotlin_note
 
 fun main(args: Array<String>) {
 
-    var testAccess : TestAccess = TestAccess("아무개")
+    var testAccess: TestAccess = TestAccess("아무개")
     // testAccess.name 접근불가
     // println(testAccess.name) 접근불가
     // testAccess.test()
@@ -23,12 +23,12 @@ class TestAccess {
         this.name = name
     }
 
-    private fun test(){
+    private fun test() {
         println("테스트")
         println(name)
     }
 
-    fun changeName(newName:String){
+    fun changeName(newName: String) {
         this.name = newName
     }
 }
