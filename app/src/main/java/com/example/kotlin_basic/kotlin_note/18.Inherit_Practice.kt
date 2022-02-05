@@ -5,7 +5,7 @@ package com.example.kotlin_basic.kotlin_note
 // SuperKnight, SuperMonster (자식)
 
 
-fun main(array: Array<String>) {
+fun main(args: Array<String>) {
     val monster = SuperMonster(100, 10)
     val knight = SuperKnight(200, 20)
     monster.attack(knight)
@@ -41,6 +41,6 @@ class SuperMonster(hp: Int, power: Int /* , val item: String */) : Character(hp,
 class SuperKnight(hp: Int, power: Int) : Character(hp, power) {
     val defensePower: Int = 2
     override fun defense(damage: Int) {
-        super.defense(damage-defensePower)
+        super.defense(damage - defensePower)
     }
 }
