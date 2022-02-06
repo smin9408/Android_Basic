@@ -27,5 +27,5 @@ fun main(args: Array<String>) {
     val list5 = listOf/*<Any>*/(1, 2, 3, "a") // 타입은 -> Any
     // 부모 : Any
     // 자식 : String, Int, Float
-
+    // 1day 1commit
 }
