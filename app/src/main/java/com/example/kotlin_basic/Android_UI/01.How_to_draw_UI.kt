@@ -18,4 +18,4 @@ package com.example.kotlin_basic.Android_UI
 //      - xxxhdpi -> 640
 
 // -dp -> Density Independent Pixcel
-//     - 픽셀 독립적인 단위   
+//     - 픽셀 독립적인 단위
