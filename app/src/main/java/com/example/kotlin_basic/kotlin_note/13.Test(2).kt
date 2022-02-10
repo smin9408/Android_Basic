@@ -7,6 +7,14 @@ fun main(args: Array<String>) {
     println(calculator1.minus(5, 15))
     println(calculator1.multiply(20, 10))
     println(calculator1.divide(30, 2))
+
+    println()
+
+    val calculator2 = Calculator2()
+    println(calculator2.plus(1, 2, 3, 4, 5))
+    println(calculator2.minus(10, 1, 2, 3))
+    println(calculator2.multiply(10, 2, 3))
+    println(calculator2.divide(10, 2, 3))
 }
 
 // 1.사칙 연산을 수행할 수 있는 클래스
@@ -43,9 +51,11 @@ class Calculator2() {
     }
 
     fun minus(vararg numbers: Int): Int {
-        var result: Int = 0
+        var result: Int = numbers[0]
         for (i in 0 until numbers.size) {
-            result = result - numbers[i]
+            if (i != 0) {
+                result = result - numbers[i]
+            }
         }
         return result
     }
