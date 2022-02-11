@@ -15,6 +15,11 @@ fun main(args: Array<String>) {
     println(calculator2.minus(10, 1, 2, 3))
     println(calculator2.multiply(10, 2, 3))
     println(calculator2.divide(10, 2, 3))
+
+    val calculator3 = Calculator3(3)
+    calculator3.plus(5).minus(2)
+    //
+
 }
 
 // 1.사칙 연산을 수행할 수 있는 클래스
@@ -78,6 +83,30 @@ class Calculator2() {
             }
         }
         return result
+    }
+}
+
+// 자기 자신 class를 rerutn해서 이어 나가는 것을 체이닝(chaining)이라고 한다
+class Calculator3(val initialValue: Int) {
+
+    fun plus(number: Int): Calculator3 {
+        val result = this.initialValue + number
+        return  Calculator3(result)
+    }
+
+    fun minus(number:Int):Calculator3{
+        val result = this.initialValue - number
+        return  Calculator3(result)
+    }
+
+    fun multiply(number:Int):Calculator3{
+        val result = this.initialValue * number
+        return  Calculator3(result)
+    }
+
+    fun divide(number:Int):Calculator3{
+        val result = this.initialValue / number
+        return  Calculator3(result)
     }
 }
 
