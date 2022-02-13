@@ -112,6 +112,8 @@ class Calculator3(val initialValue: Int) {
 
 // Debugging
 
+// 내일부터 본격적인 시작!!
+
 // 2.은행 계좌 만들기
 //   - 계좌 생성 기능 (이름, 생년월일)
 //   - 잔고를 확인하는 기능
