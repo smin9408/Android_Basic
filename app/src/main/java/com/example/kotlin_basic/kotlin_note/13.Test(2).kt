@@ -91,34 +91,54 @@ class Calculator3(val initialValue: Int) {
 
     fun plus(number: Int): Calculator3 {
         val result = this.initialValue + number
-        return  Calculator3(result)
+        return Calculator3(result)
     }
 
-    fun minus(number:Int):Calculator3{
+    fun minus(number: Int): Calculator3 {
         val result = this.initialValue - number
-        return  Calculator3(result)
+        return Calculator3(result)
     }
 
-    fun multiply(number:Int):Calculator3{
+    fun multiply(number: Int): Calculator3 {
         val result = this.initialValue * number
-        return  Calculator3(result)
+        return Calculator3(result)
     }
 
-    fun divide(number:Int):Calculator3{
+    fun divide(number: Int): Calculator3 {
         val result = this.initialValue / number
-        return  Calculator3(result)
+        return Calculator3(result)
     }
 }
 
 // Debugging
 
-// 내일부터 본격적인 시작!!
 
 // 2.은행 계좌 만들기
-//   - 계좌 생성 기능 (이름, 생년월일)
+//   - 계좌 생성 기능 (이름, 생년월일, 초기금액)
 //   - 잔고를 확인하는 기능
 //   - 출금 기능
 //   - 예금 기능
+class Account(val name: String, val birth: String, var balance: Int) {
+
+    fun checkBalance(): Int {
+        return balance
+    }
+
+    fun withdraw(amount: Int): Boolean {
+        if (balance > amount) {
+            return true
+        } else {
+            return false
+        }
+
+    }
+
+    fun save(amount: Int){
+        balance += amount
+    }
+
+}
+
 
 // 3.TV 클래스
 //   - on/off 기능
