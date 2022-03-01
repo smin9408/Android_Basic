@@ -117,7 +117,7 @@ class Calculator3(val initialValue: Int) {
 //   - 계좌 생성 기능 (이름, 생년월일, 초기금액)
 //   - 잔고를 확인하는 기능
 //   - 출금 기능
-//   - 예금 기능
+//   - 예금 기능 why
 class Account(val name: String, val birth: String, var balance: Int) {
 
     fun checkBalance(): Int {
